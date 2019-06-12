@@ -65,7 +65,7 @@ public class ProjectAction implements Action {
 
 	@Override
 	public String getIconFileName() {
-		return "/plugin/evosuite-jenkins-plugin/icons/evosuite.png";
+		return "/plugin/evosuite-jenkins-plugin/icons/nuthammer.png";
 	}
 
 	@Override

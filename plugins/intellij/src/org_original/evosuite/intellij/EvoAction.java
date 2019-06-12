@@ -47,7 +47,9 @@ import java.util.*;
 public class EvoAction extends AnAction {
 
     public EvoAction() {
-        super("Run EvoSuite",
+        //Modify by me
+        //super("Run EvoSuite",
+        super("NUT Hammer",
                 "Open GUI dialog to configure and start running EvoSuite to generate JUnit tests automatically",
                 loadIcon());
     }

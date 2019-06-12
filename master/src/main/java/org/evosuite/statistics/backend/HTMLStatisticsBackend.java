@@ -76,7 +76,7 @@ public class HTMLStatisticsBackend implements StatisticsBackend {
 		copyFile("img02.jpg");
 		copyFile("img03.jpg");
 		copyFile("img04.png");
-		copyFile("evosuite.png");
+		copyFile("nuthammer.png");
 		File file = new File(getReportDir(), "report-generation.html");
 		StringBuffer report = new StringBuffer();
 
@@ -212,7 +212,7 @@ public class HTMLStatisticsBackend implements StatisticsBackend {
 		buffer.append("</head>\n");
 		buffer.append("<body onload=\"prettyPrint()\">\n");
 		buffer.append("<div id=\"wrapper\">\n");
-		buffer.append("<img src=\"files/evosuite.png\" height=\"40\"/>\n");
+		buffer.append("<img src=\"files/nuthammer.png\" height=\"40\"/>\n");
 	}
 
 	/**

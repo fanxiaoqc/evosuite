@@ -75,7 +75,9 @@ public class EvoParameters {
         cores = p.getInt(CORES_EVOSUITE_PARAM,1);
         memory = p.getInt(MEMORY_EVOSUITE_PARAM,2000);
         time = p.getInt(TIME_EVOSUITE_PARAM,3);
-        folder = p.getValue(TARGET_FOLDER_EVOSUITE_PARAM, "src/evo");
+        //modify by me
+        //folder = p.getValue(TARGET_FOLDER_EVOSUITE_PARAM, "src/evo");
+        folder = p.getValue(TARGET_FOLDER_EVOSUITE_PARAM, "src/test/java");
 
         String envJavaHome = System.getenv("JAVA_HOME");
         javaHome = p.getValue(JAVA_HOME, envJavaHome!=null ? envJavaHome : "");
@@ -88,6 +90,8 @@ public class EvoParameters {
     }
 
     public void save(Project project){
+        setParameters(project); //add by me
+
         PropertiesComponent p = PropertiesComponent.getInstance(project);
         p.setValue(CORES_EVOSUITE_PARAM,""+cores);
         p.setValue(TIME_EVOSUITE_PARAM,""+time);
@@ -99,6 +103,29 @@ public class EvoParameters {
         p.setValue(EXECUTION_MODE,executionMode);
         p.setValue(GUI_DIALOG_WIDTH,""+guiWidth);
         p.setValue(GUI_DIALOG_HEIGHT,""+guiHeight);
+    }
+
+    /**
+     * add by me. Set parameters in static way
+     */
+    private void setParameters(project){
+        PropertiesComponent p = PropertiesComponent.getInstance(project);
+        cores = p.getInt(CORES_EVOSUITE_PARAM,1);
+        memory = p.getInt(MEMORY_EVOSUITE_PARAM,2000);
+        time = p.getInt(TIME_EVOSUITE_PARAM,3);
+        //modify by me
+        //folder = p.getValue(TARGET_FOLDER_EVOSUITE_PARAM, "src/evo");
+        folder = p.getValue(TARGET_FOLDER_EVOSUITE_PARAM, "src/test/java");
+
+        String envJavaHome = System.getenv("JAVA_HOME");
+        javaHome = p.getValue(JAVA_HOME, envJavaHome!=null ? envJavaHome : "");
+        mvnLocation = p.getValue(MVN_LOCATION,"");
+        //evosuiteJarLocation = p.getValue(EVOSUITE_JAR_LOCATION,"");
+        evosuiteJarLocation = p.getValue(EVOSUITE_JAR_LOCATION,"C:\\Workings\\SC\\evosuite-1.0.6.jar");
+        executionMode = p.getValue(EXECUTION_MODE,EXECUTION_MODE_MVN);
+
+        guiWidth = p.getInt(GUI_DIALOG_WIDTH, 570);
+        guiHeight = p.getInt(GUI_DIALOG_HEIGHT, 300);
     }
 
     private String getPossibleLocationForMvn(){

@@ -18,6 +18,7 @@
 		<module>maven-test</module>
 		<module>build-support-test</module>
 		<!-- <module>eclipse</module> -->
+		<module>intellij</module>
 	</modules>
 
 </project>

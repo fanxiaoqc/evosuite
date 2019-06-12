@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.evosuite.plugins</groupId>
+        <artifactId>evosuite-plugins</artifactId>
+        <version>1.0.7-SNAPSHOT</version>
+    </parent>
+
+    <!-- Module used to check if running ES tests in Ant works fine -->
+    <artifactId>evosuite-intellij-plugin</artifactId>
+    <version>1.0.6</version>
+    <packaging>jar</packaging>
+   <!-- <packaging>maven-plugin</packaging>-->
+
+    <properties>
+        <evosuiteVersion>${project.version}</evosuiteVersion>
+    </properties>
+
+    <dependencies>
+        <!-- Force this module to be built after the Master-->
+        <dependency>
+            <groupId>org.evosuite</groupId>
+            <artifactId>evosuite-master</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.shared</groupId>
+            <artifactId>maven-verifier</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.ant</groupId>
+            <artifactId>ant-junit</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- add by me begin. Let Intellij plugin code normally -->
+        <!-- https://mvnrepository.com/artifact/com.intellij/openapi -->
+       <!-- <dependency>
+            <groupId>com.intellij</groupId>
+            <artifactId>openapi</artifactId>
+            <version>7.0.3</version>
+        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/com.intellij/annotations -->
+        <dependency>
+            <groupId>com.intellij</groupId>
+            <artifactId>annotations</artifactId>
+            <version>12.0</version>
+        </dependency>
+
+        <!--http://repo1.maven.org/maven2/com/github/adedayo/intellij/sdk/-->
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>annotations</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>core-api</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>core-impl</artifactId>
+            <version>142.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>platform-api</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>platform-impl</artifactId>
+            <version>142.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>execution-openapi</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>execution-impl</artifactId>
+            <version>142.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>openapi</artifactId>
+            <version>142.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>editor-ui-ex</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>editor-ui-api</artifactId>
+            <version>142.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>util</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>util-rt</artifactId>
+            <version>142.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>lang-api</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>lang-impl</artifactId>
+            <version>142.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>projectModel-api</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>projectModel-impl</artifactId>
+            <version>142.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>compiler-impl</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>compiler-openapi</artifactId>
+            <version>142.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.adedayo.intellij.sdk</groupId>
+            <artifactId>extensions</artifactId>
+            <version>142.1</version>
+        </dependency>
+        <!-- add by me end. Let Intellij plugin code normally -->
+    </dependencies>
+
+</project>

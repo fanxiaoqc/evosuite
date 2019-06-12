@@ -379,7 +379,7 @@ public class EvoStartDialog extends JDialog {
             errors.add("Duration needs to be a positive value");
         } else {
             params.setTime(time);
-        }
+        }e
 
         if (params.usesMaven() && !checkIfValidMaven(new File(mvn))) {
             errors.add("Invalid Maven executable: choose a correct one");
@@ -402,7 +402,6 @@ public class EvoStartDialog extends JDialog {
         params.setFolder(dir);
         params.setGuiWidth(this.getWidth());
         params.setGuiHeight(this.getHeight());
-
 
         if (validate && !errors.isEmpty()) {
             String title = "ERROR: EvoSuite Plugin";

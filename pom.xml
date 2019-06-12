@@ -217,13 +217,14 @@
             libraries: https://glassfish.java.net/public/CDDL+GPL_1_1.html For each library
             you want to add, add a comment regarding its used license. -->
         <dependencies>
+          <!--omitted by me
             <dependency>
                 <groupId>com.sun</groupId>
                 <artifactId>tools</artifactId>
                 <version>1.0.0</version>
                 <scope>system</scope>
                 <systemPath>${toolsjar}</systemPath>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <!-- GPL, but classpath exception -->
                 <groupId>javax.xml.bind</groupId>

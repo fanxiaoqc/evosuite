@@ -36,10 +36,11 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
+        <!--omitted by me
         <dependency>
             <groupId>com.sun</groupId>
             <artifactId>tools</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>

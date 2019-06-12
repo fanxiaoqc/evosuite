@@ -20,8 +20,8 @@
 
 -->
 <idea-plugin version="2">
-  <id>org.evosuite.plugin.intellij</id>
-  <name>EvoSuite Plugin</name>
+  <id>org.evosuite.plugin.intellij2</id>
+  <name>NUT Hammer Plugin</name>
   <version>1.0.5-SNAPSHOT</version>
   <vendor email="arcuri82@gmail.com" url="http://www.evosuite.org">EvoSuite</vendor>
 

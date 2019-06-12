@@ -36,8 +36,9 @@ import shaded.org.evosuite.runtime.sandbox.Sandbox.SandboxMode;
 @EvoSuiteClassExclude
 public class Inputs_ESTest_scaffolding {
 
-  @org.junit.Rule 
-  public org.junit.rules.Timeout globalTimeout = new org.junit.rules.Timeout(4000); 
+  @org.junit.Rule
+  //modify by me. Timeout from 4000 to 6000
+  public org.junit.rules.Timeout globalTimeout = new org.junit.rules.Timeout(6000);
 
   private static final java.util.Properties defaultProperties = (java.util.Properties) java.lang.System.getProperties().clone(); 
 

@@ -106,7 +106,6 @@ public class ProjectRegistration implements ProjectComponent { //implements Appl
         panel.add(toolBarPanel, BorderLayout.WEST);
         panel.add(consolePanel,BorderLayout.CENTER);
 
-
         //Content content = contentFactory.createContent(consolePanel, "", false);
         Content content = contentFactory.createContent(panel, "", false);
         toolWindow.getContentManager().addContent(content);
